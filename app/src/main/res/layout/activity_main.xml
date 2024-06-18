@@ -74,11 +74,20 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/et_input"
+            android:id="@+id/et_user"
             android:layout_below="@id/btn_7"
             android:layout_marginTop="10dp"
             android:hint="User name"
             android:textColorHint="#000000"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_password"
+            android:layout_below="@id/et_user"
+            android:layout_marginTop="10dp"
+            android:hint="Password"
+            android:textColorHint="#000000"
+            />
     </RelativeLayout>
 
 </LinearLayout>
