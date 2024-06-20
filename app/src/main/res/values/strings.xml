@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">AndroidLearning</string>
+    <string name="txt_btn_1">Button 1</string>
+    <string name="txt_btn_2">Button 2</string>
+    <string name="txt_btn_3">Button 3</string>
+    <string name="txt_btn_4">Button 4</string>
+    <string name="txt_btn_5">Button 5</string>
+    <string name="txt_btn_6">btn_6</string>
+    <string name="txt_btn_7">Submit</string>
+    <string name="txt_userid">Userid</string>
+    <string name="txt_password">Password</string>
+    <string name="txt_hint">123456</string>
+    <string name="txt_btn">Click</string>
+
 </resources>
