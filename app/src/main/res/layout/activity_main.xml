@@ -11,28 +11,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_1"
-        android:text="Buttion 1"
+        android:text="Name"
         android:textAllCaps="false"
         android:textColor="#DF1A1A"
         android:backgroundTint="#000000"
         android:textSize="20sp"
         />
+
     <Button
+        android:id="@+id/btn_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btn_2"
-        android:text="Button 2"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_gravity="center_horizontal"
+        android:text="Middle name" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_3"
-        android:text="Button 3"/>
+        android:text="Surname"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_4"
-        android:text="Button 4"/>
+        android:text="Email"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,12 +44,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_5"
-            android:text="Button 5"/>
+            android:text="Mobile No."/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_6"
-            android:text="Button 6"/>
+            android:text="address"/>
 
     </LinearLayout>
 
@@ -58,12 +60,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_7"
-            android:text="Button 7"/>
+            android:text="Submit"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tv_display"
-            android:text="ABCDEFGH"
+            android:text="Rakesh"
             android:layout_toRightOf="@id/btn_7"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -76,18 +78,45 @@
             android:layout_height="wrap_content"
             android:id="@+id/et_user"
             android:layout_below="@id/btn_7"
-            android:layout_marginTop="10dp"
-            android:hint="User name"
+            android:layout_marginTop="20dp"
+            android:hint="Userid"
             android:textColorHint="#000000"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/et_password"
             android:layout_below="@id/et_user"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:hint="Password"
             android:textColorHint="#000000"
             />
     </RelativeLayout>
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_7"
+        android:text="Submit"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_display"
+        android:text="Rakesh"
+        android:layout_toRightOf="@id/btn_7"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_password"
+        android:layout_below="@id/et_user"
+        android:layout_marginTop="20dp"
+        android:hint="123456"
+        android:textColorHint="#000000"
 
 </LinearLayout>
