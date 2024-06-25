@@ -18,7 +18,8 @@ fun main(args: Array<String>) {
 //    println(sum)
 
 
-//    val a = A()
+    val a = A()
+    a.doSomething()
 ////    println(a.name)
 ////    println(a.age)
 //    println("Your name is ${a.name} and your age is ${a.age}")
@@ -38,7 +39,7 @@ fun main(args: Array<String>) {
 //    }
 
 
-    printDay(50)
+//    printDay(50)
 
 
 }
@@ -85,3 +86,13 @@ fun printDay(num: Int){
         }
     }
 }
+
+// variable declaration
+// lateinit
+// class concept
+// loop
+// conditional statement
+// fun creation
+// function call
+// inheritance
+// interface

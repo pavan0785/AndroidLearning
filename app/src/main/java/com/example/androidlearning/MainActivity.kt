@@ -12,8 +12,10 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity: AppCompatActivity(), View.OnClickListener {
     lateinit var btnClick: Button
     lateinit var tvDisplay: TextView
+    lateinit var tvLname: TextView
     var initValue: Int = 0
     lateinit var etInput: EditText
+    lateinit var etLname: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +23,8 @@ class MainActivity: AppCompatActivity(), View.OnClickListener {
         btnClick = findViewById(R.id.btn_click)
         tvDisplay = findViewById(R.id.tv_display)
         etInput = findViewById(R.id.et_input)
+        etLname = findViewById(R.id.et_lname)
+        tvLname = findViewById(R.id.tv_lname)
 
 //        tvDisplay.text = initValue.toString()
 
@@ -34,6 +38,8 @@ class MainActivity: AppCompatActivity(), View.OnClickListener {
 //        initValue++
 //        tvDisplay.text = "You have clicked me"
 //        tvDisplay.text = initValue.toString()
+//        tvDisplay.text = etInput.text.toString()+" "+etLname.text.toString()
         tvDisplay.text = etInput.text.toString()
+        tvLname.text = etLname.text.toString()
     }
 }

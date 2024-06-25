@@ -122,7 +122,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/et_input"
-        android:hint="enter something"/>
+        android:hint="Enter First name"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_lname"
+        android:hint="Enter Last name"/>
 
 
     <com.google.android.material.button.MaterialButton
@@ -135,6 +141,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tv_display"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_lname"
         android:layout_gravity="center"
         android:textSize="20sp"
         android:textStyle="bold"
