@@ -18,8 +18,8 @@ fun main(args: Array<String>) {
 //    println(sum)
 
 
-    val a = A()
-    a.doSomething()
+//    val a = A()
+//    a.doSomething()
 ////    println(a.name)
 ////    println(a.age)
 //    println("Your name is ${a.name} and your age is ${a.age}")
