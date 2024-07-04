@@ -25,7 +25,7 @@ class RadiobuttonActivity : AppCompatActivity(), RadioGroup.OnCheckedChangeListe
     }
 
     override fun onCheckedChanged(group: RadioGroup?, checkedId: Int) {
-        var rbGender = findViewById<RadioButton>(checkedId)
-        tvDisplay.text = rbGender.text.toString()
+        var rgGender = findViewById<RadioButton>(checkedId)
+        tvDisplay.text = rgGender.text.toString()
     }
 }
