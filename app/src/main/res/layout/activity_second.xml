@@ -15,5 +15,14 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_mob"
+        android:text="Second page"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/tv_display"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
