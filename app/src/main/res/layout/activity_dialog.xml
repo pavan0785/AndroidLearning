@@ -15,4 +15,18 @@
         android:text="Show Alert Dialog"
         android:layout_marginTop="20dp"/>
 
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_progress_dialog"
+        android:text="Show Progress Dialog"
+        android:layout_marginTop="10dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_custom_dialog"
+        android:text="Show Custom Dialog"
+        android:layout_marginTop="10dp"/>
+
 </LinearLayout>
