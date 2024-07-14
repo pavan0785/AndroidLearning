@@ -25,7 +25,6 @@ class ListViewActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_list_view)
         listView = findViewById(R.id.list_view)
 
