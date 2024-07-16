@@ -29,6 +29,7 @@ class MyCustomListAdapter(private val context: Context, private val empList: Mut
         var imageView = myView.findViewById<ImageView>(R.id.item_iv)
         var tvName = myView.findViewById<MaterialTextView>(R.id.tv_name)
         var tvMobile = myView.findViewById<MaterialTextView>(R.id.tv_mobile)
+
         imageView.setImageDrawable(employee.image)
         tvName.setText(employee.name)
         tvMobile.setText(employee.mobile.toString())
