@@ -6,10 +6,12 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidlearning.R
+import com.example.androidlearning.interfaces.OnItemClickListener
 import com.example.androidlearning.model.Employee
 import com.google.android.material.textview.MaterialTextView
 
-class MyRecyclerviewAdapter(private val empList: List<Employee>): RecyclerView.Adapter<MyRecyclerviewAdapter.MyRecyclerviewHolder>() {
+class MyRecyclerviewAdapter(private val empList: List<Employee>, private val onItemClickListener: OnItemClickListener): RecyclerView.Adapter<MyRecyclerviewAdapter.MyRecyclerviewHolder>() {
+    lateinit var mOnItemClickListener: OnItemClickListener
 
     inner class MyRecyclerviewHolder(val view: View): RecyclerView.ViewHolder(view) {
         var tvName = view.findViewById<MaterialTextView>(R.id.tv_name)
@@ -21,6 +23,7 @@ class MyRecyclerviewAdapter(private val empList: List<Employee>): RecyclerView.A
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyRecyclerviewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.layout_custom_list_item, parent, false)
         val myRecyclerViewHolder = MyRecyclerviewHolder(view)
+        mOnItemClickListener = onItemClickListener
         return myRecyclerViewHolder
 
     }
@@ -34,6 +37,10 @@ class MyRecyclerviewAdapter(private val empList: List<Employee>): RecyclerView.A
         holder.tvName.text = employee.name
         holder.tvMobile.text = employee.mobile.toString()
         holder.imageView.setImageDrawable(employee.image)
+
+        holder.itemView.setOnClickListener {
+            mOnItemClickListener.onItemClick(position, employee)
+        }
 
     }
 }
