@@ -10,6 +10,7 @@ material = "1.10.0"
 gsonversion = "2.11.0"
 activity = "1.9.0"
 constraintlayout = "2.1.4"
+lifecycleVersion = "2.8.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -21,6 +22,9 @@ material = { group = "com.google.android.material", name = "material", version.r
 gsonDependency = {group = "com.google.code.gson", name = "gson", version.ref = "gsonversion"}
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+view-model = {group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleVersion"}
+live-data = {group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleVersion"}
+saved-state-view-model = {group = "androidx.lifecycle", name = "lifecycle-viewmodel-savedstate", version.ref = "lifecycleVersion"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

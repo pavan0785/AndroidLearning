@@ -1,12 +1,13 @@
 package com.example.androidlearning.viewModel
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class CountViewModel: ViewModel() {
-    var count = 0
+class CountViewModel(private var i: Int): ViewModel() {
+    var count: MutableLiveData<Int> = MutableLiveData(i)
 
     fun countInc(): Int{
-        count = count + 1
-        return count
+        count.value = count.value?.plus(1)
+        return count.value!!
     }
 }
