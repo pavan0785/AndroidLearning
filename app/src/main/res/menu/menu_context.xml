@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Update User"
+        android:id="@+id/item_update_user"/>
+    <item
+        android:title="Delete User"
+        android:id="@+id/item_delete_users"/>
+</menu>

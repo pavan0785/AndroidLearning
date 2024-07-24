@@ -1,0 +1,51 @@
+package com.example.androidlearning.repository
+
+import android.content.ContentValues
+import android.content.Context
+import android.database.sqlite.SQLiteDatabase
+import android.database.sqlite.SQLiteOpenHelper
+import android.widget.Toast
+
+private const val DB_NAME = "pawan"
+private const val TABLE_NAME = "user"
+private const val DB_VERSION = 1
+
+
+private const val COL_SI_NO = "Sn"
+private const val COL_FNAME = "Fname"
+private const val COL_LNAME = "Lname"
+private const val COL_EMAIL = "Email"
+
+class SqliteDbRepository(private val context: Context) {
+
+    val CREATE_TABLE = "CREATE TABLE $TABLE_NAME($COL_SI_NO INTEGER PRIMARY KEY AUTOINCREMENT, $COL_FNAME TEXT, $COL_LNAME TEXT, $COL_EMAIL TEXT)"
+
+    val myOpenHelper = MyOpenHelper(context)
+    val sqliteDb = myOpenHelper.writableDatabase
+
+
+    fun addUser(fName: String, lName: String, email: String){
+        val contentValue = ContentValues()
+        contentValue.put(COL_FNAME, fName)
+        contentValue.put(COL_LNAME, lName)
+        contentValue.put(COL_EMAIL, email)
+        val rowId = sqliteDb.insert(TABLE_NAME, null, contentValue)
+        if (rowId>0){
+            Toast.makeText(context, "User successfully added.", Toast.LENGTH_SHORT).show()
+        }else{
+            Toast.makeText(context, "Something went wrong.", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+
+    inner class MyOpenHelper(private val context: Context): SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION){
+        override fun onCreate(sqlDb: SQLiteDatabase?) {
+            sqlDb!!.execSQL(CREATE_TABLE)
+        }
+
+        override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
+        }
+
+    }
+
+}
