@@ -1,6 +1,7 @@
 package com.example.androidlearning.viewModel
 
 import androidx.lifecycle.ViewModel
+import com.example.androidlearning.model.User
 import com.example.androidlearning.repository.SqliteDbRepository
 
 class SqliteViewModel(private val repository: SqliteDbRepository): ViewModel() {
@@ -10,5 +11,9 @@ class SqliteViewModel(private val repository: SqliteDbRepository): ViewModel() {
 
     fun addUser(fName: String, lName: String, email: String){
         repository.addUser(fName, lName, email)
+    }
+
+    fun getAllUsers(): ArrayList<User>{
+        return repository.getAllUsers()
     }
 }

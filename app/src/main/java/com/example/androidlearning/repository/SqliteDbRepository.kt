@@ -5,6 +5,8 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.widget.Toast
+import com.example.androidlearning.model.User
+import com.example.androidlearning.model.UserInfo
 
 private const val DB_NAME = "pawan"
 private const val TABLE_NAME = "user"
@@ -35,6 +37,25 @@ class SqliteDbRepository(private val context: Context) {
         }else{
             Toast.makeText(context, "Something went wrong.", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    fun getAllUsers(): ArrayList<User>{
+        var userList = arrayListOf<User>()
+        val COLUMNS = arrayOf(COL_SI_NO, COL_FNAME, COL_LNAME, COL_EMAIL)
+        val cursor = sqliteDb.query(TABLE_NAME, COLUMNS, null, null, null, null, null)
+        if (cursor.count > 0){
+            cursor.moveToFirst()
+            do {
+              var srNo = cursor.getInt(0)
+              var fName = cursor.getString(1)
+              var lName = cursor.getString(2)
+              var email = cursor.getString(3)
+              var user = User(srNo, fName, lName, email)
+              userList.add(user)
+            }while (cursor.moveToNext())
+
+        }
+        return userList
     }
 
 

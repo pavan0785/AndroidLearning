@@ -2,6 +2,7 @@ package com.example.androidlearning.activity
 
 import android.app.Dialog
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
@@ -11,6 +12,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView.LayoutParams
 import com.example.androidlearning.R
+import com.example.androidlearning.adapter.CustomUserAdapter
 import com.example.androidlearning.databinding.ActivityUserListBinding
 import com.example.androidlearning.databinding.LayoutAddUserBinding
 import com.example.androidlearning.factory.SqliteDbViewModelFactory
@@ -31,6 +33,8 @@ class UserListActivity : AppCompatActivity() {
         sqliteDbViewModelFactory = SqliteDbViewModelFactory(sqlRepository)
         sqliteViewModel = ViewModelProvider(this, sqliteDbViewModelFactory)[SqliteViewModel::class.java]
         sqliteViewModel.openDataBase()
+
+        updateView()
     }
 
 
@@ -51,6 +55,9 @@ class UserListActivity : AppCompatActivity() {
                 lBinding.btnAddUser.setOnClickListener {
                     sqliteViewModel.addUser(lBinding.etFname.text.toString(), lBinding.etLname.text.toString(), lBinding.etEmail.text.toString())
                     dialog.dismiss()
+
+                    updateView()
+
                 }
 
                 dialog.show()
@@ -65,6 +72,9 @@ class UserListActivity : AppCompatActivity() {
     }
 
 
-
+    fun updateView(){
+        val userAdapter = CustomUserAdapter(this, sqliteViewModel.getAllUsers())
+        binding.listView.adapter = userAdapter
+    }
 
 }
