@@ -58,6 +58,37 @@ class SqliteDbRepository(private val context: Context) {
         return userList
     }
 
+    fun updateUser(fName: String, lName: String, email: String, id: Int){
+        val contentValue = ContentValues()
+        contentValue.put(COL_FNAME, fName)
+        contentValue.put(COL_LNAME, lName)
+        contentValue.put(COL_EMAIL, email)
+        val id = sqliteDb.update(TABLE_NAME, contentValue, COL_SI_NO+"="+id, null)
+        if (id>0){
+            Toast.makeText(context, "User successfully updated.", Toast.LENGTH_SHORT).show()
+        }else{
+            Toast.makeText(context, "Something went wrong.", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    fun deleteUser(id: Int){
+        val id = sqliteDb.delete(TABLE_NAME, COL_SI_NO+"="+id, null)
+        if (id>0){
+            Toast.makeText(context, "User successfully deleted.", Toast.LENGTH_SHORT).show()
+        }else{
+            Toast.makeText(context, "Something went wrong.", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    fun deleteAllUsers(){
+        val id = sqliteDb.delete(TABLE_NAME, null, null)
+        if (id>0){
+            Toast.makeText(context, "$id User successfully deleted.", Toast.LENGTH_SHORT).show()
+        }else{
+            Toast.makeText(context, "Something went wrong.", Toast.LENGTH_SHORT).show()
+        }
+    }
+
 
     inner class MyOpenHelper(private val context: Context): SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION){
         override fun onCreate(sqlDb: SQLiteDatabase?) {
