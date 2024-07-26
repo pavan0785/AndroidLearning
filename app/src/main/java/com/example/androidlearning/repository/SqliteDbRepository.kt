@@ -58,6 +58,7 @@ class SqliteDbRepository(private val context: Context) {
         return userList
     }
 
+
     fun updateUser(fName: String, lName: String, email: String, id: Int){
         val contentValue = ContentValues()
         contentValue.put(COL_FNAME, fName)

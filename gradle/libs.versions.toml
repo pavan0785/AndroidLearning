@@ -11,6 +11,8 @@ gsonversion = "2.11.0"
 activity = "1.9.0"
 constraintlayout = "2.1.4"
 lifecycleVersion = "2.8.3"
+roomVersion = "2.6.1"
+coroutineVersion = "1.9.0-RC"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -25,6 +27,11 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 view-model = {group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleVersion"}
 live-data = {group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleVersion"}
 saved-state-view-model = {group = "androidx.lifecycle", name = "lifecycle-viewmodel-savedstate", version.ref = "lifecycleVersion"}
+room-dependency = {group = "androidx.room", name = "room-runtime", version.ref = "roomVersion"}
+room-annotation-process = {group = "androidx.room", name = "room-compiler", version.ref = "roomVersion"}
+room-kapt-version = {group = "androidx.room", name = "room-compiler", version.ref = "roomVersion"}
+coroutine-dependency = {group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutineVersion"}
+coroutine-android = {group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutineVersion"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
