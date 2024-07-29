@@ -32,6 +32,7 @@ room-annotation-process = {group = "androidx.room", name = "room-compiler", vers
 room-kapt-version = {group = "androidx.room", name = "room-compiler", version.ref = "roomVersion"}
 coroutine-dependency = {group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutineVersion"}
 coroutine-android = {group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutineVersion"}
+coroutine-support-room-dependency = {group = "androidx.room", name = "room-ktx", version.ref = "roomVersion"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

@@ -54,6 +54,7 @@ dependencies {
     kapt(libs.room.kapt.version)
     implementation(libs.coroutine.dependency)
     implementation(libs.coroutine.android)
+    implementation(libs.coroutine.support.room.dependency)
     annotationProcessor(libs.room.annotation.process)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
