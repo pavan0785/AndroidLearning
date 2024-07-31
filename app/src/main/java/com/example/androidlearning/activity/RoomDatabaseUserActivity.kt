@@ -2,17 +2,24 @@ package com.example.androidlearning.activity
 
 import android.app.Dialog
 import android.os.Bundle
+import android.util.Log
+import android.view.ContextMenu
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView.LayoutParams
 import com.example.androidlearning.R
+import com.example.androidlearning.adapter.RecyclerViewUserListAdapter
 import com.example.androidlearning.databinding.ActivityRoomDatabaseUserBinding
 import com.example.androidlearning.databinding.LayoutAddUserBinding
+import com.example.androidlearning.databinding.LayoutUpdateUserBinding
 import com.example.androidlearning.factory.UserActivityViewmodelFactory
 import com.example.androidlearning.repository.UserRepository
 import com.example.androidlearning.roomDb.User
@@ -36,6 +43,14 @@ class RoomDatabaseUserActivity : AppCompatActivity() {
         val userRepository = UserRepository(userDao)
         userActivityViewmodelFactory = UserActivityViewmodelFactory(userRepository)
         userActivityViewmodel = ViewModelProvider(this, userActivityViewmodelFactory)[UserActivityViewmodel::class.java]
+
+        binding.rvUserList.layoutManager = LinearLayoutManager(this)
+        userActivityViewmodel.getAllUsers.observe(this, Observer {
+            val myAdapter = RecyclerViewUserListAdapter(it)
+            binding.rvUserList.adapter = myAdapter
+        })
+
+        registerForContextMenu(binding.rvUserList)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -69,4 +84,36 @@ class RoomDatabaseUserActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
+
+    override fun onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?) {
+        super.onCreateContextMenu(menu, v, menuInfo)
+        menuInflater.inflate(R.menu.menu_context, menu)
+    }
+
+    override fun onContextItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.item_update_user ->{
+                val lBinding = LayoutUpdateUserBinding.inflate(layoutInflater)
+                val dialog = Dialog(this)
+                dialog.setContentView(lBinding.root)
+                dialog.setCancelable(false)
+
+                lBinding.btnUpdateUser.setOnClickListener {
+                    dialog.dismiss()
+
+                }
+
+                dialog.show()
+                dialog.window!!.setLayout(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
+            }
+
+            R.id.item_delete_users ->{
+            }
+        }
+        return super.onContextItemSelected(item)
+    }
+
+
+
 }
