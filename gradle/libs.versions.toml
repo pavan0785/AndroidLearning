@@ -13,6 +13,9 @@ constraintlayout = "2.1.4"
 lifecycleVersion = "2.8.3"
 roomVersion = "2.6.1"
 coroutineVersion = "1.9.0-RC"
+retrofitVersion = "2.11.0"
+okhttpInterceptor = "4.12.0"
+picassoVersion = "2.8"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -33,6 +36,11 @@ room-kapt-version = {group = "androidx.room", name = "room-compiler", version.re
 coroutine-dependency = {group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutineVersion"}
 coroutine-android = {group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutineVersion"}
 coroutine-support-room-dependency = {group = "androidx.room", name = "room-ktx", version.ref = "roomVersion"}
+retrofit-dependency = {group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofitVersion"}
+converter-gson = {group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofitVersion"}
+okhttp-interceptor = {group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttpInterceptor"}
+picasso-dependency = {group = "com.squareup.picasso", name = "picasso", version.ref = "picassoVersion"}
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
