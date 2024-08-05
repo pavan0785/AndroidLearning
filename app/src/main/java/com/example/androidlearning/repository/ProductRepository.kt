@@ -11,12 +11,14 @@ import retrofit2.Response
 
 object ProductRepository {
     val product = MutableLiveData<List<ProductItem>>()
+    var isLoading: MutableLiveData<Boolean> = MutableLiveData<Boolean>(true)
 
     fun getProduct(): LiveData<List<ProductItem>>{
         val call = RetrofitClient.apiInterface.getProduct()
         call.enqueue(object: retrofit2.Callback<List<ProductItem>>{
             override fun onResponse(call: Call<List<ProductItem>>, response: Response<List<ProductItem>>) {
                 if (response.isSuccessful){
+                    isLoading.postValue(false)
                     val productList = response.body()
                     product.postValue(productList!!)
                     Log.d("TAG", "onResponse: ${response.body()}")
@@ -24,6 +26,7 @@ object ProductRepository {
             }
 
             override fun onFailure(call: Call<List<ProductItem>>, throwable: Throwable) {
+                isLoading.postValue(false)
                 Log.d("TAG", "onFailure: $throwable")
             }
 

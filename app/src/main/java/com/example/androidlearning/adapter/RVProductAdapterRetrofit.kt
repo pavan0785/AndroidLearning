@@ -6,10 +6,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidlearning.apiResponse.ProductItem
 import com.example.androidlearning.databinding.LayoutProductItemBinding
+import com.example.androidlearning.interfaces.OnProductItemClickListener
 import com.squareup.picasso.Picasso
 
-class RVProductAdapterRetrofit(private val productList: List<ProductItem>): RecyclerView.Adapter<RVProductAdapterRetrofit.MyRecyclerviewHolder>() {
-
+class RVProductAdapterRetrofit(private val productList: List<ProductItem>, val onProductItemClickListener: OnProductItemClickListener): RecyclerView.Adapter<RVProductAdapterRetrofit.MyRecyclerviewHolder>() {
+    private var mOnProductItemClickListener: OnProductItemClickListener = onProductItemClickListener
     inner class MyRecyclerviewHolder(val binding: LayoutProductItemBinding): RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyRecyclerviewHolder {
@@ -28,6 +29,10 @@ class RVProductAdapterRetrofit(private val productList: List<ProductItem>): Recy
         Log.d("TAG_PRODUCT", "onBindViewHolder: $product")
         holder.binding.tvProductItem.text = product.title
         Picasso.get().load(product.image).into(holder.binding.ivProduct)
+
+        holder.itemView.setOnClickListener {
+            mOnProductItemClickListener.onClickProduct(position, product)
+        }
 
     }
 }
