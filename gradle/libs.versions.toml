@@ -16,6 +16,7 @@ coroutineVersion = "1.9.0-RC"
 retrofitVersion = "2.11.0"
 okhttpInterceptor = "4.12.0"
 picassoVersion = "2.8"
+fragment_version = "1.8.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -40,6 +41,7 @@ retrofit-dependency = {group = "com.squareup.retrofit2", name = "retrofit", vers
 converter-gson = {group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofitVersion"}
 okhttp-interceptor = {group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttpInterceptor"}
 picasso-dependency = {group = "com.squareup.picasso", name = "picasso", version.ref = "picassoVersion"}
+fragment-dependency = {group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragment_version"}
 
 
 [plugins]

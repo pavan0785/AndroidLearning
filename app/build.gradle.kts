@@ -59,6 +59,7 @@ dependencies {
     implementation(libs.converter.gson)
     implementation(libs.okhttp.interceptor)
     implementation(libs.picasso.dependency)
+    implementation(libs.fragment.dependency)
     annotationProcessor(libs.room.annotation.process)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

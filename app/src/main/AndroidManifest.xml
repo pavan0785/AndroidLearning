@@ -15,25 +15,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidLearning"
         tools:targetApi="31">
-
         <activity
-            android:name=".activity.ProductActivity"
+            android:name=".activity.FragementDemoActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".activity.ProductDetailsActivity"
-            android:exported="false"/>
         <activity
-            android:name=".activity.RoomDatabaseUserActivity"
+            android:name=".activity.ProductActivity"
             android:exported="true">
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
 <!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".activity.ProductDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.RoomDatabaseUserActivity"
+            android:exported="true">
+
+<!--             <intent-filter> -->
+<!--             <action android:name="android.intent.action.MAIN" /> -->
+<!--             <category android:name="android.intent.category.LAUNCHER" /> -->
+<!--             </intent-filter> -->
         </activity>
         <activity
             android:name=".coroutine.CoroutineDemoActivity"
