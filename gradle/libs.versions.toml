@@ -18,6 +18,7 @@ okhttpInterceptor = "4.12.0"
 picassoVersion = "2.8"
 fragment_version = "1.8.2"
 
+
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
