@@ -1,5 +1,6 @@
 package com.example.androidlearning.activity
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -44,6 +45,12 @@ class ProductActivity : AppCompatActivity(), OnProductItemClickListener {
             if (it){
                 dialog.show()
             }else{
+//                alertDialog.setPositiveButton("Retry", object: DialogInterface.OnClickListener{
+//                    override fun onClick(p0: DialogInterface?, p1: Int) {
+//
+//                    }
+//
+//                })
                 dialog.dismiss()
             }
         })

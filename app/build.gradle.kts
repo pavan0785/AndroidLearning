@@ -51,6 +51,8 @@ dependencies {
     implementation(libs.saved.state.view.model)
     implementation(libs.live.data)
     implementation(libs.room.dependency)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
     kapt(libs.room.kapt.version)
     implementation(libs.coroutine.dependency)
     implementation(libs.coroutine.android)
