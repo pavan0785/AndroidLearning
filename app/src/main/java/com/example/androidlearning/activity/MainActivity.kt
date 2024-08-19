@@ -31,7 +31,7 @@ class MainActivity: AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(view: View?) {
-//        Log.d("TAG", "Youo have clicked me")
+//        Log.d("TAG", "You have clicked me")
 //        Toast.makeText(this@MainActivity, "You clicked me", Toast.LENGTH_SHORT).show()
 //        initValue = initValue + 1
 //        initValue++

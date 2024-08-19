@@ -61,7 +61,6 @@ class DialogActivity : AppCompatActivity(), View.OnClickListener,
         mDay = calender.get(Calendar.DAY_OF_MONTH)
         mMonth = calender.get(Calendar.MONTH)
         mYear = calender.get(Calendar.YEAR)
-
         tvDate.text = ""+mDay+"/"+(mMonth + 1)+"/"+mYear
 
         numberPicker.minValue = 1
@@ -74,7 +73,7 @@ class DialogActivity : AppCompatActivity(), View.OnClickListener,
 
     override fun onClick(view: View?) {
         when (view!!.id) {
-            R.id.btn_alert_dialog -> {
+            R.id.btn_alert_dialog ->
                 val builder = AlertDialog.Builder(this)
                 builder.setIcon(R.drawable.ic_alert)
                 builder.setTitle("Alert")

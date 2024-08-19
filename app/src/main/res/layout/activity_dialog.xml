@@ -1,53 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.DialogActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".activity.DialogActivity">
+
     <com.google.android.material.button.MaterialButton
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/btn_alert_dialog"
-        android:text="Show Alert Dialog"
-        android:layout_marginTop="20dp"/>
-
-    <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Show Alert Dialog" />
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_progress_dialog"
-        android:text="Show Progress Dialog"
-        android:layout_marginTop="10dp"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Show Progress Dialog" />
 
     <com.google.android.material.button.MaterialButton
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/btn_custom_dialog"
-        android:text="Show Custom Dialog"
-        android:layout_marginTop="10dp"/>
-    <com.google.android.material.button.MaterialButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Show Custom Dialog" />
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_datepicker_dialog"
-        android:text="Show Datepicker Dialog"
-        android:layout_marginTop="10dp"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:baselineAligned="false"
+        android:text="Show Datepicker Dialog" />
 
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_date"
-        android:textSize="20sp"
-        android:textStyle="bold"
         android:layout_gravity="center_horizontal"
-        />
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <NumberPicker
+        android:id="@+id/number_picker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/number_picker"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp" />
 
