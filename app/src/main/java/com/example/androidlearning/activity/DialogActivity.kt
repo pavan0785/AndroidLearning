@@ -73,34 +73,34 @@ class DialogActivity : AppCompatActivity(), View.OnClickListener,
 
     override fun onClick(view: View?) {
         when (view!!.id) {
-            R.id.btn_alert_dialog ->
-                val builder = AlertDialog.Builder(this)
-                builder.setIcon(R.drawable.ic_alert)
-                builder.setTitle("Alert")
-                builder.setMessage("Do you want to exit?")
-                builder.setCancelable(false)
-
-                builder.setPositiveButton("Ok", object : DialogInterface.OnClickListener {
-                    override fun onClick(p0: DialogInterface?, p1: Int) {
-                        finish()
-                    }
-
-                })
-
-                builder.setNegativeButton("Cancel", object : DialogInterface.OnClickListener {
-                    override fun onClick(p0: DialogInterface?, p1: Int) {
-
-                    }
-
-                })
-
-//        builder.show()
-                val alertDialog = builder.create()
-                alertDialog.show()
-                alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).isAllCaps = false
-                alertDialog.getButton(AlertDialog.BUTTON_POSITIVE)
-                    .setTextColor(getColor(R.color.dialog_pos_btn_color))
-            }
+//            R.id.btn_alert_dialog ->
+//                val builder = AlertDialog.Builder(this)
+//                builder.setIcon(R.drawable.ic_alert)
+//                builder.setTitle("Alert")
+//                builder.setMessage("Do you want to exit?")
+//                builder.setCancelable(false)
+//
+//                builder.setPositiveButton("Ok", object : DialogInterface.OnClickListener {
+//                    override fun onClick(p0: DialogInterface?, p1: Int) {
+//                        finish()
+//                    }
+//
+//                })
+//
+//                builder.setNegativeButton("Cancel", object : DialogInterface.OnClickListener {
+//                    override fun onClick(p0: DialogInterface?, p1: Int) {
+//
+//                    }
+//
+//                })
+//
+////        builder.show()
+//                val alertDialog = builder.create()
+//                alertDialog.show()
+//                alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).isAllCaps = false
+//                alertDialog.getButton(AlertDialog.BUTTON_POSITIVE)
+//                    .setTextColor(getColor(R.color.dialog_pos_btn_color))
+//            }
 
             R.id.btn_progress_dialog -> {
                 val progDialog = ProgressDialog(this)

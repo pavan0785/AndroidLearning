@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "453375600190",
+    "project_id": "android-learning-6adaf",
+    "storage_bucket": "android-learning-6adaf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:453375600190:android:86fd063fe2e3646b3d536f",
+        "android_client_info": {
+          "package_name": "com.example.androidlearning"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCgpybxGPYngbbefUNoLF0GSIGsfocosQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
