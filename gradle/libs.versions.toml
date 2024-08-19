@@ -19,6 +19,8 @@ picassoVersion = "2.8"
 fragment_version = "1.8.2"
 navigationFragmentKtx = "2.7.7"
 navigationUiKtx = "2.7.7"
+hiltVersion = "2.44"
+glideVersion = "4.16.0"
 
 
 [libraries]
@@ -47,9 +49,13 @@ picasso-dependency = {group = "com.squareup.picasso", name = "picasso", version.
 fragment-dependency = {group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragment_version"}
 androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
-
+hilt-dependency = {group = "com.google.dagger", name = "hilt-android", version.ref = "hiltVersion"}
+hilt-android-compilern = {group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hiltVersion"}
+glide-dependency = {group = "com.github.bumptech.glide", name = "glide", version.ref = "glideVersion"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+hilt-plugin = {id = "com.google.dagger.hilt.android", version.ref = "hiltVersion"}
+
 

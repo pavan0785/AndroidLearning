@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id ("kotlin-kapt")
+//    alias(libs.plugins.hilt.plugin)
 }
 
 android {
@@ -62,10 +63,12 @@ dependencies {
     implementation(libs.okhttp.interceptor)
     implementation(libs.picasso.dependency)
     implementation(libs.fragment.dependency)
+    implementation(libs.hilt.dependency)
+//    kapt(libs.hilt.android.compilern)
+    implementation(libs.glide.dependency)
     annotationProcessor(libs.room.annotation.process)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-//    implementation("com.google.code.gson:gson:2.11.0")
     implementation(libs.gsonDependency)
 }
