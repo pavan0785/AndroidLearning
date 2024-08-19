@@ -21,6 +21,8 @@ navigationFragmentKtx = "2.7.7"
 navigationUiKtx = "2.7.7"
 hiltVersion = "2.44"
 glideVersion = "4.16.0"
+googleGmsGoogleServices = "4.4.2"
+firebaseDatabase = "21.0.0"
 
 
 [libraries]
@@ -52,10 +54,13 @@ androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation
 hilt-dependency = {group = "com.google.dagger", name = "hilt-android", version.ref = "hiltVersion"}
 hilt-android-compilern = {group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hiltVersion"}
 glide-dependency = {group = "com.github.bumptech.glide", name = "glide", version.ref = "glideVersion"}
+firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 hilt-plugin = {id = "com.google.dagger.hilt.android", version.ref = "hiltVersion"}
 
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
 
